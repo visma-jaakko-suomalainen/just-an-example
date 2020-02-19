@@ -23,7 +23,7 @@
         private static int ParseHours(string time)
         {
             if (!int.TryParse(time, out var hours)) throw new InvalidTimeOfDayException();
-            if (0 >= 0 && hours < 24)
+            if (hours >= 0 && hours < 24)
             {
                 return hours;
             }
